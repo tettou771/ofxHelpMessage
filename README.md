@@ -7,7 +7,7 @@ I made it to show help message on window easily.
 
 ## Requirement
 
-`ofxHelpMessage doesn't depend other addons.
+ofxHelpMessage doesn't depend other addons.
 
 ## Tested system
 
@@ -29,17 +29,19 @@ For example.
 
 ```cpp
 // add message
-ofxHelpMessage::addMessage("Key L: load");
+ofxHelpMessage::addMessage("HELP (dummy message)");
+ofxHelpMessage::addMessage("Key S: Save");
+ofxHelpMessage::addMessage("Key L: Load");
 
 // clear message
-ofxHelpMessage::clear();
+//ofxHelpMessage::clear();
 
 // set text color
-// default value is ofColor::white
-ofxHelpMessage::setColor(ofColor(255, 255, 0));
+// default: ofColor::white
+ofxHelpMessage::setTextColor(ofColor(255, 255, 0));
 
 // set background color
-// default value is ofColor(0, 0, 0, 100), this is black transparently
+// default: ofColor(0, 0, 0, 150) this is black transparently
 ofxHelpMessage::setBackgroundColor(ofColor(0));
 
 // set font
@@ -47,13 +49,15 @@ ofxHelpMessage::setBackgroundColor(ofColor(0));
 ofxHelpMessage::loadFont("arial.ttf", 30);
 
 // set position
-ofxHelpMessage::setPos(500, 1000);
+// default: (10, 10)
+ofxHelpMessage::setPos(500, 500);
 
 // change show message key
-// default key is '?'
-ofxHelpMessage::setKey(' ');
+// default: '?'
+ofxHelpMessage::setHelpKey(' ');
 
 // set show mode to momentary/toggle
+// default: true (momentary)
 ofxHelpMessage::setMomentary(false); // toggle mode
 
 ```
