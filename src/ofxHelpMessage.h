@@ -22,7 +22,7 @@ public:
 	static ofColor getTextColor();
 	static void setBackgroundColor(ofColor _color);
 	static ofColor getBackgroundColor();
-	static void setHelpKey(char _key);
+	static void setHelpKey(int _key);
 	static char getHelpKey();
 	static void setMomentary(bool _momentary);
 	static bool getMomentary();
@@ -38,7 +38,7 @@ private:
 	ofVec2f pos;
 	void updateDrawPos();
 	ofVec2f drawPos;
-	char helpKey;
+	int helpKey;
 	ofMutex mutex;
 
 	string message;

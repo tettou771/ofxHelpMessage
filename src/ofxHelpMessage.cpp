@@ -103,7 +103,7 @@ ofColor ofxHelpMessage::getBackgroundColor() {
 	return singleton->bgColor;
 }
 
-void ofxHelpMessage::setHelpKey(char _key) {
+void ofxHelpMessage::setHelpKey(int _key) {
 	singletonGenerate();
 	singleton->helpKey = _key;
 }
